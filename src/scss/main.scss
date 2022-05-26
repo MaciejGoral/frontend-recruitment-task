@@ -119,3 +119,33 @@ $main-font:Roboto, sans-serif;
     text-decoration: none;
     cursor: pointer;
   }
+  .resetButton{
+    display: flex;
+    /* Primary #1 */
+
+    background: #E4C1AE;
+    border-radius: 32px;
+    border-style: solid;
+    border-color: #E4C1AE;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    /* set text color to white */
+    color: #FFFFFF;
+}
+.popupHeader{
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+}
+.popupText{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+}

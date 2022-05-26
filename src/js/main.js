@@ -1,11 +1,8 @@
-// Get the modal
 const modal = document.querySelector(".modal");
-// Get the button that opens the modal
 const btn = document.querySelector(".openPopupButton");
-// Get the <span> element that closes the modal
 const span = document.querySelector(".close");
-// Get the <span> element that closes the modal
 const popupText = document.querySelector(".popupText");
+const resetButton = document.querySelector(".resetButton");
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -17,11 +14,25 @@ btn.onclick = function() {
   }
   else
   {
-    localStorage.setItem("numberOfClicks", parseInt(numberofClicks)+1);
+    numberofClicks++;
   }
-  popupText.innerHTML="You have clicked "+localStorage.getItem("numberOfClicks")+" times to related button.";
+  localStorage.setItem("numberOfClicks", numberofClicks);
+  popupText.innerHTML="You have clicked <b>"+localStorage.getItem("numberOfClicks")+" times</b> to related button.";
+  if(numberofClicks < 5)
+  {
+    resetButton.style.display="none";
+  }
+  else
+  {
+    resetButton.style.display="block";
+  }
 }
 
+resetButton.onclick = function() {
+    localStorage.setItem("numberOfClicks", 0);
+    popupText.innerHTML="You have clicked "+localStorage.getItem("numberOfClicks")+" times to related button.";
+    resetButton.style.display="none";
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
