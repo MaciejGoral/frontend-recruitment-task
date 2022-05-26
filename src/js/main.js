@@ -30,7 +30,7 @@ btn.onclick = function() {
 
 resetButton.onclick = function() {
     localStorage.setItem("numberOfClicks", 0);
-    popupText.innerHTML="You have clicked "+localStorage.getItem("numberOfClicks")+" times to related button.";
+    popupText.innerHTML="You have clicked <b>"+localStorage.getItem("numberOfClicks")+" times</b> to related button.";
     resetButton.style.display="none";
 }
 // When the user clicks on <span> (x), close the modal
