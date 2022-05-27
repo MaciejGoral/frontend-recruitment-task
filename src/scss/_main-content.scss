@@ -1,0 +1,47 @@
+body{
+    font-family: $main-font;
+    font-style: normal;
+}
+
+.container {
+    width:1440px;
+    background: #FFFFFF;
+    display: flex;
+    margin:auto;
+    margin-top: 5%;
+    width: 50%;
+}
+
+.content>*{
+  margin-top: 8%;
+}
+
+.mainImage{
+  margin-right:5%;
+  object-fit: cover;
+}
+  
+.h1 {
+    font-weight: $header-font-weight;
+    font-size: $header-font-size;
+    line-height: 120%;
+    color: #121212;
+}
+
+.p{
+    font-weight: $paragraph-font-weight;
+    font-size: $paragraph-font-size;
+    line-height: 150%;
+    color: #121212;
+}
+
+@media (max-width: $media-breakpoint) {
+  .container {
+      display:block;
+      width: 90%;
+  }
+  .mainImage{
+    float:none;
+    width: 100%;
+  }
+}

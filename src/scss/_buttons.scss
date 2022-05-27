@@ -1,0 +1,21 @@
+.btn{
+    padding: 16px 40px;
+    background: $main-color;
+    border-style: solid;
+    border-color: $main-color;
+    font-weight: $header-font-weight;
+    font-size: 16px;
+    line-height: 100%;
+    &OpenPopup{
+      color: #FFFFFF;
+      border-radius: 32px;
+    }
+    &Reset{
+      color:black;
+      border-color: black;
+    }
+    &:hover{
+      cursor: pointer;
+      background: $hover-color;
+    }
+  }
