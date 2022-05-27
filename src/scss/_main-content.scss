@@ -25,14 +25,12 @@ body{
     font-weight: $header-font-weight;
     font-size: $header-font-size;
     line-height: 120%;
-    color: #121212;
 }
 
 .p{
     font-weight: $paragraph-font-weight;
     font-size: $paragraph-font-size;
     line-height: 150%;
-    color: #121212;
 }
 
 @media (max-width: $media-breakpoint) {
