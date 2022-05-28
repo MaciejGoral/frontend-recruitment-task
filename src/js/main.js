@@ -12,7 +12,7 @@ btn.onclick = function() {
   numberOfClicks == null ? numberOfClicks=1 : numberOfClicks++;
   localStorage.setItem("numberOfClicks", numberOfClicks);
   //display number of clicks
-  popupText.innerHTML="You have clicked <b>"+localStorage.getItem("numberOfClicks")+" times</b> to related button.";
+  popupText.innerHTML="You have clicked <b>"+numberOfClicks+" times</b> to related button.";
   //display or hide reset button
   numberOfClicks < 5?resetButton.style.display="none":resetButton.style.display="block"; 
   addDataToTable();
@@ -44,6 +44,7 @@ window.onclick = function(event) {
   }
 }
 
+//get data from endpoint
 async function getData(){
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
   var data = await response.json();
@@ -55,12 +56,14 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
+//add data to table, show loading in the meantime
 async function addDataToTable()
 {
-  document.querySelector("#loading").style.display="block";
+  const loading=document.querySelector("#loading")
+  loading.style.display="block";
   await delay(3000);
   await getData().then(data => {
-    document.querySelector("#loading").style.display="none";
+    loading.style.display="none";
     const table = document.querySelector("#table");
     table.style.display='inline-block'; 
     //only add data if it was not already added

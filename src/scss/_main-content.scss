@@ -33,13 +33,20 @@ body{
     line-height: 150%;
 }
 
-@media (max-width: $media-breakpoint) {
+@media (max-width: $media-breakpoint-small) {
   .container {
-      display:block;
-      width: 90%;
+    display:block;
+    width: 90%;
+    text-align: center;
   }
   .mainImage{
     float:none;
     width: 100%;
+  }
+}
+@media (min-width: $media-breakpoint-small) and (max-width: $media-breakpoint-medium)
+{
+  .container {
+    width: 70%;
   }
 }
