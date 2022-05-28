@@ -25,23 +25,28 @@ body{
     font-weight: $header-font-weight;
     font-size: $header-font-size;
     line-height: 120%;
-    color: #121212;
 }
 
 .p{
     font-weight: $paragraph-font-weight;
     font-size: $paragraph-font-size;
     line-height: 150%;
-    color: #121212;
 }
 
-@media (max-width: $media-breakpoint) {
+@media (max-width: $media-breakpoint-small) {
   .container {
-      display:block;
-      width: 90%;
+    display:block;
+    width: 90%;
+    text-align: center;
   }
   .mainImage{
     float:none;
     width: 100%;
+  }
+}
+@media (min-width: $media-breakpoint-small) and (max-width: $media-breakpoint-medium)
+{
+  .container {
+    width: 70%;
   }
 }
